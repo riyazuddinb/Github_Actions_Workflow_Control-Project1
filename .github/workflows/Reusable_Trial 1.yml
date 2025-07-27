@@ -38,7 +38,9 @@ jobs:
     needs: build
     uses: ./.github/workflows/reusable.yml
     with:
-      artifact-name: test-files
+      artifact-name: test-files         
+#    secrets:
+#        some-secret: ${{ secrets.some-secret }}  # Replace with your actual secret name  
       # This is the name of the artifact to be downloaded in the reusable workflow
       # It should match the name used in the upload-artifact step in the build job
 
