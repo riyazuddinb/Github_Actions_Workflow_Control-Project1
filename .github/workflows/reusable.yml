@@ -4,7 +4,7 @@ on:
      inputs:
         artifact-name:
             description: 'Deploy the website'
-            required: false
+            required: true
             default: dist
             type: string
 jobs:
