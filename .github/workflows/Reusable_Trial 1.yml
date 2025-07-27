@@ -37,6 +37,10 @@ jobs:
  deploy: 
     needs: build
     uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-name: test-files
+      # This is the name of the artifact to be downloaded in the reusable workflow
+      # It should match the name used in the upload-artifact step in the build job
 
 
 
