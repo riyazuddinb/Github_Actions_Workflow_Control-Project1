@@ -1,4 +1,4 @@
-name: Matrix Website Deployment
+name: Website Deployment
 on:
   push:
     branches:
@@ -10,13 +10,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         node: [18, 20]
-        include:
-          - os: ubuntu-latest
-            node: 20
-        exclude:
-          - os: windows-latest
-            node: 18
-
+      
     runs-on: ${{ matrix.os}}
     steps:
       - name: Get code
@@ -29,7 +23,3 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
-  deploy:
-    needs: build
-    uses: ./.github/workflows/reusable.yml
-    
