@@ -1,8 +1,8 @@
 name: Reusable Job Trial
 on: 
-    push:
-     branches:
-        - matrix
+ push:
+  branches:
+    - matrix
 jobs:
  testing:
     runs-on: ubuntu-latest

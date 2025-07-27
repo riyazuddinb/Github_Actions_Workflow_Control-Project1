@@ -1,8 +1,6 @@
 name: Website Deployment
 on:
-  push:
-    branches:
-      - matrix
+  workflow_dispatch
 jobs:
   build:
     continue-on-error: true
